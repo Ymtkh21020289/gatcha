@@ -57,6 +57,7 @@ function intercept(target) { const striker = state.team.find((u) => alive(u) && 
 function useAction(actor, kind, target) {
   if (!actor || state.over) return;
   const action = kind === 'normal' ? actor.normal : actor[kind];
+  if (!action) { log(`${actor.name}は${kind}の行動データが未定義です。`); endTurn(actor); render(); return; }
   if (actor.buried || actor.airborne) { log(`${actor.name}は拘束中で行動不能。`); endTurn(actor); return; }
   if (action.cost && !hasMana(action.cost)) return log('マナが不足しています。');
   if (action.cost) spendMana(action.cost); if (action.manaGain) gainMana(action.manaGain);

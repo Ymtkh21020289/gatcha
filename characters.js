@@ -24,7 +24,7 @@ export const PLAYER_CHARACTERS = [
 ];
 
 export const ENEMIES = [
-  { id: 'mold_beast', name: '異形・菌獣', type: '異形', element: 'poison', speed: 92, attack: 22, defense: 16, hp: 165, pixel: '☣' },
-  { id: 'crystal_imp', name: '水晶小鬼', type: '地底', element: 'ice', speed: 118, attack: 18, defense: 10, hp: 120, pixel: '◆' },
-  { id: 'lava_crawler', name: '溶岩這い', type: '異形', element: 'fire', speed: 76, attack: 30, defense: 22, hp: 190, pixel: '▣' }
+  { id: 'mold_beast', name: '異形・菌獣', type: '異形', element: 'poison', speed: 92, attack: 22, defense: 16, hp: 165, pixel: '☣', normal: { name: '胞子噛み', hits: 1, multiplier: 1 } },
+  { id: 'crystal_imp', name: '水晶小鬼', type: '地底', element: 'ice', speed: 118, attack: 18, defense: 10, hp: 120, pixel: '◆', normal: { name: '水晶針', hits: 1, multiplier: 1 } },
+  { id: 'lava_crawler', name: '溶岩這い', type: '異形', element: 'fire', speed: 76, attack: 30, defense: 22, hp: 190, pixel: '▣', normal: { name: '熱牙', hits: 1, multiplier: 1 } }
 ];
